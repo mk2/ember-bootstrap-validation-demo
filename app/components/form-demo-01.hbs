@@ -1,0 +1,25 @@
+<BsForm @formLayout="vertical" @model={{this}} @onSubmit={{action "onSubmit"}} as |form|>
+  <form.element @controlType="text" @label="ユーザー名" @placeholder="名前" @property="username" />
+  <form.element
+    @controlType="password"
+    @label="パスワード"
+    @placeholder="xxx"
+    @property="password"
+    @helpText="4文字以上"
+  />
+  <form.element
+    @controlType="email"
+    @label="メールアドレス"
+    @placeholder="xxx@xxx.xxx"
+    @property="email"
+  />
+  <form.element
+    @controlType="email"
+    @label="メールアドレスの確認"
+    @placeholder="xxx@xxx.xxx"
+    @property="emailConfirmation"
+  />
+  <form.submitButton>
+    送信
+  </form.submitButton>
+</BsForm>
